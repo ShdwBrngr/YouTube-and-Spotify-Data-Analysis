@@ -1,0 +1,5 @@
+.venv/
+.env
+data/watch-history.json
+data/search-history.json
+data/watch_history.db
