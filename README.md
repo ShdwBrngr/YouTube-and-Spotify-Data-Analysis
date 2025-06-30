@@ -1,55 +1,64 @@
-# **YouTube Watch History Analysis 📊**
-This project is a personal data analysis and forecasting tool that explores patterns and trends in my YouTube watch history. The data was exported from **Google Takeout** and processed using Python and pandas to uncover information such as watch frequency by hour, day of the week, and trends across months and years. It also shows a time series forecasting, and saves the cleaned dataframe as a database file.
+# **YouTube & Spotify Data Analysis 📊**
+This on-going project is a personal data analysis tool that explores patterns and trends in my **Spotify streaming history** and **YouTube watch history**. The data was exported from **Google Takeout** and **Spotify's streaming history export**, and processed using Python, pandas, and SQL to uncover insights such as watch/listen frequency by hour, day, artist, and more.
 
-⚠️ Note: This project is based on personal and private data. The dataset is not included in the repository for privacy reasons.
+⚠️ *Note: This project is based on personal and private data. The dataset is not included in the repository for privacy reasons.*
 
 ## **Key Features**
+**📺 YouTube Watch History**
 - Cleans and processes exported `watch-history.json`
 - Converts timestamp data to local time and extracts:
     -  Hour, day of the week, month, and year
 - Visualizes:
     - Watch frequency by hour, weekday, and year
     - Weekly/monthly viewing trends using time series line charts
-- Forecasting: 
-    - Displays trend and seasonality patterns
-    - Forecasts future watch activity using an ARIMA model
-- Database Intergration:
-    - Converts cleaned data into SQLite database
+- Structures data for relational database:
+    - Watch history and channels
+
+**🎧 Spotify Streaming History**
+- Cleans and processes exported `Streaming_History_Audio.json`
+- Converts timestamp data to local time and extracts:
+    -  Hour, day of the week, month, and year
+- Visualizes:
+    - Top artists, songs, albums
+    - Hourly and weekly listening behaviors
+- Structures data for relational database:
+    - streams, artists, albums, and songs
+
+**🗃️ Database Integration**
+- SQLite + SQLAlchemy used to:
+    - Save cleaned data to .db file
+    - Preparation for future SQL querying and relational joins
 
 ## **Directory Structure**
 ```
 YouTube Data Analysis/
-├── data/                # YouTube data files are here
+├── data/                # YouTube and Spotify data files are here
 ├── .gitignore           # Files and directories excluded from Git tracking
 ├── README.md            # Project documentation
 ├── requirements.txt     # Python dependencies
-└── yt_analysis.ipynb    # # Main script for cleaning, analyzing, visualizing
+├── sptfy_analysis.ipynb # Spotify Data Analysis
+└── yt_analysis.ipynb    # YouTube Data Analysis
 ```
-
-## **Future Plans**
-- Full SQL database structure (MySQL or SQLite):
-    - `watch_history`: timestamps, video titles, URLs
-    - `channels`: frequency and metadata
-- Add support for Spotify streaming history analysis
-- Interactive dashboard
 
 ## **Technologies Used**
 - **Python 3** – Core language
 - **pandas** – Data cleaning and manipulation
 - **plotly / matplotlib** – Visualizations
-- **sqlite3 / SQLAlchemy** – Database storage and interaction
-- **statsmodels** – Time series analysis and ARIMA modeling
+- **sqlite3 / SQLAlchemy** – Database storage
 
-## **Privacy and Security**
-- `watch-history.json` contains sensitive personal data and is never shared.
-- `.gitignore` protects private files in the `data/` folder.
-- All scripts operate on **local data** only. Users are responsible for securing their own data.
+## **Future Plans**
+- Expand SQL-based querying on both datasets
+- Add markdowns for insights
+- Build an interactive dashboard
+- Update for easier usage for other people
 
 ## **Getting Started with Your Own Data**
 1. Export your data from **Google Takeout**
-2. Place `watch-history.json` inside a `data/` folder
-3. Check out `yt_analysis.ipynb` to clean and explore your watch history
+2. Export your Spotify data from [Spotify Privacy Settings](https://www.spotify.com/us/account/privacy/)
+2. Place `.json` files into a `data/` folder
+3. Check out `.ipynb` files to clean and explore your own data
 
-## **Notes**
-- This project is for personal use and experimentation with Python and SQL.
-- You can fork and replace with your own Takeout data to explore your habits.
+## **Privacy and Security**
+- Personal data is kept private and excluded via .gitignore
+- All scripts operate on **local data** only. Users are responsible for securing their own data.
+- This project is for local, personal use only
