@@ -2,8 +2,8 @@
 .env
 data/watch-history.json
 data/search-history.json
-data/watch_history.db
+exported/watch_history.db
 data/Streaming_History_Audio_2021-2024_0.json
 data/Streaming_History_Audio_2024-2025_1.json
 data/Streaming_History_Audio_2025_2.json
-streaming_history.db
+exported/streaming_history.db

@@ -48,7 +48,6 @@ YouTube Data Analysis/
 
 ## **Future Plans**
 - Expand SQL-based querying on both datasets
-- Add markdowns for insights
 - Build an interactive dashboard
 - Update for easier usage for other people
 
