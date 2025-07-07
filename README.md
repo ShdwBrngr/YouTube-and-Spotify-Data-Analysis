@@ -20,7 +20,7 @@ This on-going project is a personal data analysis tool that explores patterns an
     -  Hour, day of the week, month, and year
 - Visualizes:
     - Top artists, songs, albums
-    - Hourly and weekly listening behaviors
+    - Hourly and monthly listening behaviors
 - Structures data for relational database:
     - streams, artists, albums, and songs
 
@@ -33,6 +33,7 @@ This on-going project is a personal data analysis tool that explores patterns an
 ```
 YouTube Data Analysis/
 ├── data/                # YouTube and Spotify data files are here
+├── exported/            # Exported databases are here
 ├── .gitignore           # Files and directories excluded from Git tracking
 ├── README.md            # Project documentation
 ├── requirements.txt     # Python dependencies
@@ -47,7 +48,6 @@ YouTube Data Analysis/
 - **sqlite3 / SQLAlchemy** – Database storage
 
 ## **Future Plans**
-- Expand SQL-based querying on both datasets
 - Build an interactive dashboard
 - Update for easier usage for other people
 
