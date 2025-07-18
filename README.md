@@ -27,13 +27,14 @@ This on-going project is a personal data analysis tool that explores patterns an
 **🗃️ Database Integration**
 - SQLite + SQLAlchemy used to:
     - Save cleaned data to .db file
-    - Preparation for future SQL querying and relational joins
+    - Preparation for SQL querying
 
 ## **Directory Structure**
 ```
 YouTube Data Analysis/
 ├── data/                # YouTube and Spotify data files are here
 ├── exported/            # Exported databases are here
+├── images/              # Images used in the notebook are here
 ├── .gitignore           # Files and directories excluded from Git tracking
 ├── README.md            # Project documentation
 ├── requirements.txt     # Python dependencies
@@ -49,7 +50,6 @@ YouTube Data Analysis/
 
 ## **Future Plans**
 - Build an interactive dashboard
-- Update for easier usage for other people
 
 ## **Getting Started with Your Own Data**
 1. Export your data from **Google Takeout**
